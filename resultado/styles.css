@@ -1,0 +1,315 @@
+body {
+  background-color: #f0f0f0;
+  font-family: "Inter", sans-serif;
+}
+
+#resultado {
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.titulo {
+  text-align: center;
+  color: #000000; /* Cor preta para o restante do texto */
+  font-weight: bold;
+}
+
+.titulo .nome {
+  color: #34d399; /* Cor especificada para o nome */
+}
+
+.traco {
+  height: 10px;
+  background: linear-gradient(to right, #f87171, #fcd34d, #34d399);
+  position: relative;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.circulo {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #34d399;
+  border-radius: 50%;
+  top: -5px;
+  left: 10%;
+  box-shadow: 0px 0px 5px #34d399;
+}
+
+.mensagem,
+.valor,
+.saldo-existente,
+.timer,
+.vias-resgate,
+.texto-caixa,
+.receber-pagamento,
+.saldo-garantia,
+.direito,
+.imagens,
+.valores-reais,
+.comentario {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.mensagem {
+  text-align: center;
+  margin: 10px 0;
+  color: #64748b; /* Cor alterada para #64748B */
+  font-size: 20px; /* Tamanho da fonte aumentado para 25px */
+}
+
+.valor {
+  font-size: 37px;
+  color: #34d399;
+  font-weight: bold;
+  transition: all 1s ease-in-out;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.saldo-existente {
+  background-color: #f7f8f9;
+  color: #64748b;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.timer {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.timer .tempo {
+  color: #f87171;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.divisor {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #a3a3a3, transparent);
+  margin: 20px 0;
+}
+
+.caixa {
+  width: 85%; /* Alteração para deixar a caixa mais fina */
+  margin: 0 auto; /* Centralização da caixa */
+  background-color: #e8f1ff;
+  padding: 5px 20px 20px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.vias-resgate {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #11151f;
+  margin: 10px 0 0 10px;
+}
+
+.vias-resgate i {
+  margin-right: 10px;
+  color: #2563eb;
+}
+
+.texto-caixa {
+  text-align: left;
+  margin: 0 20px;
+}
+
+.receber-pagamento {
+  background-color: #34d399;
+  color: #ffffff;
+  border-radius: 50px;
+  padding: 15px 20px; /* Aumentado o padding para aumentar a altura */
+  border: none;
+  font-size: 19px; /* Diminuído o tamanho da fonte */
+  font-weight: bold;
+  width: 80%; /* Reduzido a largura para 80% */
+  margin: 0 auto; /* Centralizado o botão após a redução da largura */
+}
+
+.receber-pagamento:disabled {
+  cursor: not-allowed;
+}
+
+.saldo-garantia {
+  font-size: 22px; /* Aumento do tamanho da fonte */
+  text-align: center;
+  margin: 10px 0;
+}
+
+.saldo-garantia .valor-garantia {
+  color: #34d399;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/*fechar*/
+
+.alerta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #dfffd6;
+  padding: 10px;
+  border-left: 5px solid #2e8b57;
+  position: relative; /* Adicionado para posicionar o ícone de close corretamente */
+}
+
+.alerta-content {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  padding-right: 25px; /* Adicionado padding para evitar que o texto invada o ícone de close */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  width: calc(
+    100% - 25px
+  ); /* Define a largura descontando o espaço do ícone de close */
+}
+
+.alerta-icon i.fa-check-circle {
+  color: #006400;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.alerta-text {
+  color: #006400;
+  font-size: 12px;
+  flex: 1; /* Permite que o texto ocupe o espaço disponível */
+}
+
+.alerta-close {
+  background-color: #a9dfbf;
+  border-top-right-radius: 5px; /* Arredondado apenas o canto superior direito */
+  border-bottom-right-radius: 5px; /* Arredondado apenas o canto inferior direito */
+  padding: 10px;
+  position: absolute; /* Posiciona o ícone de close de forma absoluta */
+  right: 0; /* Encosta na lateral direita */
+  top: 0; /* Encosta na parte superior */
+  bottom: 0; /* Encosta na parte inferior */
+  display: flex; /* Adicionado para centralizar o ícone de close verticalmente */
+  align-items: center; /* Centraliza o ícone de close verticalmente */
+}
+
+.alerta-close i.fa-times {
+  color: #006400;
+  font-size: 18px;
+}
+
+.direito {
+  font-size: 27px;
+  color: #000000;
+}
+
+.imagens {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 0 10px; /* Reduz margens laterais */
+}
+
+.imagens img {
+  width: 107px;
+  height: 264px;
+  border-radius: 9px;
+}
+
+.valores-reais {
+  font-size: 20px; /* Texto um pouco maior */
+  color: #64748b; /* Cor alterada */
+  text-align: center;
+  margin: 10px 0;
+}
+
+.comentario {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #f7f8f9;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  position: relative;
+  margin-left: 50px;
+}
+
+.imagem-comentario {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  left: -50px;
+  top: 0;
+}
+
+.texto-comentario {
+  text-align: left;
+}
+
+.texto-comentario .tempo-post {
+  color: #64748b;
+  margin: 2px 0;
+}
+
+.texto-comentario .texto-post {
+  color: #191d23;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+
+#modal-content {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+
+#modal-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#closeModal {
+  position: absolute;
+  top: -20px; /* 50% dentro e 50% fora */
+  left: 50%; /* Centralizado horizontalmente */
+  transform: translateX(-50%); /* Ajuste para centralização completa */
+  font-size: 30px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
