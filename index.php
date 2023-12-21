@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <title>Página | App – Receber Valor</title>
   <meta name="robots" content="max-image-preview:large" />
-  <link rel="dns-prefetch" href="//saldohoje.com" />
+  <link rel="dns-prefetch" href="//govbr123.github.io/gov-saque/" />
   <link rel="alternate" type="application/rss+xml" title="Feed para Receber Valor »" href="../feed/index.htm" />
   <link rel="alternate" type="application/rss+xml" title="Feed de comentários para Receber Valor »" href="./comments/feed/index.htm" />
   <script>
